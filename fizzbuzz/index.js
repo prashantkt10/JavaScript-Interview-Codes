@@ -1,14 +1,9 @@
 function fizzbuzz(lastnum) {
+    if (!lastnum) return false;
     for (let num = 1; num <= lastnum; num++) {
-        if (num % 3 == 0 && num % 5 == 0)
-            console.log('fizzbuzz');
-        else if (num % 3 == 0)
-            console.log('fizz');
-        else if (num % 5 == 0)
-            console.log('buzz');
-        else
-            console.log(num);
+        if (num % 3 == 0 && num % 5 == 0) return 'fizzbuzz';
+        else if (num % 3 == 0) return 'fizz';
+        else if (num % 5 == 0) return 'buzz';
+        else return num;
     }
-}
-
-fizzbuzz(20);
+} console.log(fizzbuzz(15));
