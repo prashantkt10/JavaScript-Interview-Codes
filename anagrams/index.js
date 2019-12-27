@@ -7,8 +7,9 @@ function anagrams(stringA, stringB) {
     return true;
 }
 function buildCharMap(str) {
-    if (!str) { return; } const charMap = {};
-    for (let char of str.replace(/[^\w]/g, '').toLowerCase()) charMap[char] = charMap[char] + 1 || 1;
+    if (!str) return;
+    const charMap = {}; str = str.replace(/[^\w]/g, '').toLowerCase();
+    for (let char of str) { console.log('charMap[char] ', charMap[char]); charMap[char] = charMap[char] + 1 || 1; }
     return charMap;
 }
 console.log(anagrams('abc', 'cba'));
