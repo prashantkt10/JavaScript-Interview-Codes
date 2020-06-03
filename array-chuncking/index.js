@@ -1,5 +1,5 @@
-Method - 1
-function chunkArray(array, size) {
+//Method - 1
+function chunkArray1(array, size) {
     let tempArray = [];
     for (let x = 0; x < array.length;) {
         let internalArray = [];
@@ -13,12 +13,12 @@ function chunkArray(array, size) {
     console.log(tempArray);
 }
 
-chunkArray([1, 2, 3, 4, 5], 3);
+chunkArray1([1, 2, 3, 4, 5], 3);
 
 
 
 //Method - 2
-function chunkArray(array, size) {
+function chunkArray2(array, size) {
     let chunked = [];
     for (let element of array) {
         const last = chunked[chunked.length - 1];
@@ -30,12 +30,12 @@ function chunkArray(array, size) {
     return chunked;
 }
 
-chunkArray([1, 2, 3, 4, 5], 2);
+chunkArray2([1, 2, 3, 4, 5], 2);
 
 
 
-Method - 3
-function chunkArray(array, size) {
+//Method - 3
+function chunkArray3(array, size) {
     const chunked = [];
     let index = 0;
 
@@ -46,4 +46,4 @@ function chunkArray(array, size) {
     console.log(chunked);
 }
 
-chunkArray([1, 2, 3, 4, 5], 4);
+chunkArray3([1, 2, 3, 4, 5], 4);
